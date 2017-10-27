@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="WinCalcAnalog.Dictionary">
+
+    <!--Images-->
+    <Image x:Key="DeleteIco" Height="20" Source="StaticResources\DeleteIcon.ico"/>
+    <Image x:Key="MenuIco" Height="10" Source="StaticResources\MenuIcon.png"/>
+    <Image x:Key="MultIco" Height="13" Source="StaticResources\MultIcon.png"/>
+    
+    <Image x:Key="HistoryIco" Height="20" Source="StaticResources\HistoryIcon.png"/>
+    <Image x:Key="X2Ico" Height="16" Source="StaticResources\X2.png"/>
+    
+    
+    <!--Styles-->
+    <Style TargetType="Button" x:Key="BasicButton">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#f2f3f4"/>
+        <Setter Property="FontSize" Value="22"/>
+    </Style>
+    
+    <Style TargetType="Button" x:Key="MemoryButton" BasedOn="{StaticResource BasicButton}">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="DarkSlateGray"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Height" Value="30"/>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button" x:Key="NumberButton" BasedOn="{StaticResource BasicButton}">
+        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+    </Style>
+  
+    <Style TargetType="ContentControl" x:Key="HeadItems">
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="TbNumber" TargetType="TextBlock">
+        <Setter Property="TextAlignment" Value="Right"/>
+        <Setter Property="FontSize" Value="35"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="TbCalculation" TargetType="TextBlock">
+        <Setter Property="TextAlignment" Value="Right"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="DarkSlateGray"/>
+        <Setter Property="FontWeight" Value="Thin"/>
+    </Style>
+    
+</ResourceDictionary>
